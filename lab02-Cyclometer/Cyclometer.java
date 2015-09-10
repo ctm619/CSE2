@@ -2,8 +2,6 @@
 //CSE2 Lab 2
 //9-3-15
 
-
-
 public class Cyclometer {
     public static void main (String[]args) {
        
@@ -29,12 +27,6 @@ public class Cyclometer {
         
         System.out.println("Total distance of both trips combined: " + (distanceTrip2 + distanceTrip1) + " miles.");
         
-        
-        
-        
-        
-        
-        
-        
+           
     }
 }
