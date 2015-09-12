@@ -19,7 +19,7 @@ public class Block {
         double volume = length * width * height;
         //Calculates the surface area of the block (calculates the area of each side and adds them together)
         double sArea = (2 * length * width) + (2 * length * height) + (2 * height * width);
-        //outputs the volume and surface area of the block with the dimesnions the user entered.
+        //outputs the volume and surface area of the block with the dimesnions the user entered
         System.out.println("The volume of the block with dimensions "+length+" x "+width+" x "+height+": "+volume);
         System.out.println("The surface area of the block is: " + sArea);
     }
