@@ -7,15 +7,16 @@ public class Calculator {
         Scanner scan = new Scanner(System.in);
         //Prompts the user to enter a value for A, and then assigns it the variable numA
         System.out.print("Enter an integer value for A: ");
-        int numA = scan.nextInt();
+        double numA = scan.nextDouble();
         //Prompts the user to enter a value for B, and assigns that value to the variable numB
         System.out.print("Enter an integer value for B: ");
-        int numB = scan.nextInt();
+        double numB = scan.nextDouble();
         //Prompts the user to enter what mathematical operation they would like to perform on 
         //the numbers they entered previously
         System.out.print("Enter an operator (+,-,*,/): ");
         //Assigns that operator to the variable op. 
         String op = scan.next();
+    
         
         switch (op) {
             //if op = '+' then the result of adding the two numbers is printed
@@ -32,6 +33,7 @@ public class Calculator {
                 break;
             //if op = '/' then the result of A divided by B is printed    
             case "/":
+                
                 System.out.println("A / B = " + (numA/numB));
                 break;
             //if the user entered any operator besides the four given, this default String is printed
