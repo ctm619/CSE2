@@ -1,3 +1,4 @@
+//imports the Scanner class to be used in the program.
 import java.util.Scanner;
 
 public class CalculatorSpecial {
@@ -6,9 +7,9 @@ public class CalculatorSpecial {
         Scanner scan = new Scanner(System.in);
         
        
-        
+        //starts the while loop with no user input by setting loop equal to true to start
         boolean loop = true;
-        
+        //while loop is true, the following code is carried out
         while (loop) {
             //Prompts the user to enter a value for A, and then assigns it the variable numA
             System.out.print("Enter an integer value for A: ");
@@ -47,8 +48,12 @@ public class CalculatorSpecial {
                     break;
                 
             }
+            //Prompts the user to input a key indicating whether or not they want to continue
             System.out.print("Press N or n to stop, press anything else to continue: ");
+            //Assigns the user's input to the String stop
             String stop = scan.next();
+            //if else statement: if 'stop' equals n or N, then loop is set to false, ending the while statement and ending the program. 
+            //Otherwise, loop stays equal to true, and the user is prompted to enter new values for A and B again.
             if (stop.equals("N") || stop.equals("n"))
             {
                 loop = false;
