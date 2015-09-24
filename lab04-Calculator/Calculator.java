@@ -5,6 +5,8 @@ public class Calculator {
     public static void main (String []args) {
         //creates the instance of the scanner class 'scan' that is used in the program
         Scanner scan = new Scanner(System.in);
+       
+       
         //Prompts the user to enter a value for A, and then assigns it the variable numA
         System.out.print("Enter an integer value for A: ");
         double numA = scan.nextDouble();
@@ -16,8 +18,8 @@ public class Calculator {
         System.out.print("Enter an operator (+,-,*,/): ");
         //Assigns that operator to the variable op. 
         String op = scan.next();
-    
         
+            
         switch (op) {
             //if op = '+' then the result of adding the two numbers is printed
             case "+":
@@ -40,9 +42,12 @@ public class Calculator {
             default:
                 System.out.println("That is not a valid operator.");
                 break;
+               
+                
+                
+            }
             
-        }
-       
+        
         
     }
 }

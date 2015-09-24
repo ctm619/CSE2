@@ -29,6 +29,7 @@ public class Add {
            System.out.print("To play again enter 1: ");
            play = scan.nextInt();
        }
+       System.out.println("You quit the game :'(");
         
     }
 }
