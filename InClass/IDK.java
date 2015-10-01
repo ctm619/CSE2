@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class IDK {
     public static void main (String[]args) {
-        Scanner scan = new Scanner(System.in);
-        while (!scan.hasNextInt())
+        int myVal = 10;
+        while (myVal % 3 != 0)
         {
-            System.out.println("Enter a number: ");
-            
+            myVal = myVal - 5;
         }
+        System.out.println(24/myVal);
     }
 }
