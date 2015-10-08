@@ -7,7 +7,7 @@ public class encrypted_x {
         //creates a new instance of the Scanner class 'scan' to be used in the program
         Scanner scan = new Scanner (System.in);
         //prompts the user to enter the size of the output
-        System.out.println("Enter the size of the square: ");
+        System.out.println("Enter the size of the square (must be between 0 and 100): ");
         //assigns the user's input to the variable 'input'
         int input = scan.nextInt();
         //checks to see if the user entered a valid int (between 0 and 100)
