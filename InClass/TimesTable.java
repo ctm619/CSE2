@@ -8,7 +8,12 @@ public class TimesTable {
         System.out.print("*  | ");
         for (int v = 1; v <= n; v++)
         {
-            System.out.print(v + "   ");
+            if (v < 10) {
+                System.out.print(v + "   ");
+            }
+            else {
+                System.out.print(v + "  ");
+            }
         }
         System.out.println();
         int go = 5 + (4*n);
@@ -19,7 +24,12 @@ public class TimesTable {
         System.out.println();
         for (int i = 1; i <= n; i++)
         {
-            System.out.print(i + "  | ");
+            if (i < 10) {
+                System.out.print(i + "  | ");
+            }
+            else {
+                System.out.print(i + " | ");
+            }
             for (int j = 1; j <= n; j++)
             {
                 if (j*i < 10) {
