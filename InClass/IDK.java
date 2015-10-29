@@ -1,21 +1,17 @@
 import java.util.Scanner;
 public class IDK {
-    public static int addAll() 
-    {
-        int i = 1;
-        int j = 0;
-        while (i < 10)
-        {
-            j = j + i;
-            if (i == 5)
-            {
-                return j;
-            }
-            i++;
-        }
-        return i + j;
-    }
+    
     public static void main (String[]args) {
-        System.out.println(addAll());
-         }
+        int a = 2;
+        int b = 5;
+        System.out.println(method(a, b));
+    }
+    public static int method(int a , int b) {
+        int c = b-a;
+        int m = a;
+        for (int x = 1; x <= c; x++) {
+             m =  m* (a+x);
+        }
+        return m;
+    }
 }

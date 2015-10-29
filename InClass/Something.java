@@ -1,21 +1,15 @@
-
-
+//overload with types, parameters, or sequence
+//return type does not affect overloading
+//ARRAYS!!!!!!!!!!!
+//
 public class Something {
-    public static void overload1(int x) {
-        System.out.println("x = " + x);
-    }
-    public static void overload1(boolean x) {
-        System.out.println("x = " + x);
-    }
-    public static void overload2(int x) {
-        System.out.println(x);
-    }
-    public static void overload2(int x, int y) {
-        System.out.println(x + ", " + y);
-    }
     public static void main (String []args) {
+        //int[] arr = {1,2,3,4,5,6,7};
+        int[] arr = new int[5];
+        arr[0] = 5;
         
-        overload2(5);
-        overload2(5, 10);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(arr[i]);
+        }
     }
 }
