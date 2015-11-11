@@ -9,8 +9,12 @@ public class MineSweeper {
         Scanner scan = new Scanner(System.in);
         Random generator = new Random();
         //prompts the user ot enter an integer for the size of the board('n')
-        System.out.print("Enter the size of the board: ");
-        int n = scan.nextInt();
+        //'n' cannot be less than 2 or greater than 30
+        int n = 0;
+        while (n < 2 || n > 30) {
+            System.out.print("Enter the size of the board(between 2 and 30): ");
+            n = scan.nextInt();
+        }
         //creates a 2D int array 'sweeper', size 'n' by 'n'
         int [][] sweeper = new int [n][n];
         //sets every value in 'sweeper' equal to 0
@@ -20,8 +24,12 @@ public class MineSweeper {
             }
         }
         //prompts the user to enter the number of mines to be placed randomly on the board('m')
-        System.out.print("Enter the number of mines to placed on the board: ");
-        int m = scan.nextInt();
+        //the number of mines cannot exceed the size of the board ('n'*'n'), and obviously cannot be less than 1
+        int m = 0;
+        while (m < 1 || m > (n*n)) {
+            System.out.print("Enter the number of mines to placed on the board: ");
+            m = scan.nextInt();
+        }
         int beginning = 0;
         //runs until all the mines have been placed and all the surrounding spaces have been properly marked
         while (beginning < m) {
@@ -33,7 +41,6 @@ public class MineSweeper {
             if (sweeper[x][y] != 9) {
                 sweeper[x][y] = 9;
                 beginning++;
-            
                 //runs through the 8 places surrounding the mine
                 for (int i = x - 1; i <= x+1; i++) {
                     for (int j = y - 1; j <= y+1; j++) {
@@ -43,7 +50,7 @@ public class MineSweeper {
                                 sweeper[i][j]++;
                             }
                         }
-                        //if the space is off the board, this catch statement stops an out of bounds exception from crashing the program
+                        //the try/catch statement keeps the program from crashing if an out of bounds exception occurs
                         catch(Exception e) {
                         }
                     }
@@ -77,7 +84,5 @@ public class MineSweeper {
             }
             System.out.println();
         }
-       
-        
     }
 }
